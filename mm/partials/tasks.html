@@ -1,0 +1,17 @@
+<button type="submit" class="btn btn-small" ng-click="updateTasks()"><i class="icon-refresh"></i> Refresh</button>
+<ul class="unstyled">
+    <li ng-repeat="task in tasks">
+        <input type="checkbox" ng-model="task.done">
+        <span class="done-{{task.done}}">{{task.text}}</span>
+    </li>
+</ul>
+<h6>Total: {{getTotalTasks()}}</h6>
+<form class="form-horizontal">
+    <input type="text" ng-model="formTaskText" id="textBox" ng-model-instant>
+    <button class="btn" ng-click="addTask()"><i class="icon-plus"></i>Add</button>
+</form>
+<div id="select">
+    <button class="btn-small" ng-click="selectAllTasks()">Select All</button>
+    <button class="btn-small" ng-click="deselectAllTasks()">Select None</button>
+</div>
+<button class="btn-large" ng-click="clearCompleted()"><i class="icon-trash"></i>Clear Completed</button>

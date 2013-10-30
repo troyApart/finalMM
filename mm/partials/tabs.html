@@ -1,0 +1,19 @@
+﻿<div>
+    <tabset>
+        <tab ng-repeat="workspace in workspaces"
+             heading="{{workspace.name}}"
+             active=workspace.active>
+            <div ng-controller="TabsChildController">
+                <div>
+                    {{$parent.workspace.id}} : {{ $parent.workspace.name}}
+                </div>
+                <input type="text" ng-model="workspace.name"/>
+            </div>     
+        </tab>
+        <tab select="addWorkspace()">
+            <tab-heading>
+                <i class="icon-plus-sign"></i>
+            </tab-heading>
+        </tab>
+    </tabset>
+</div>

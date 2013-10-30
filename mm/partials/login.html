@@ -1,0 +1,77 @@
+<!-- Registration & Login Section -->
+<section class="registerLoginContainer">
+    <button id="registerButton" type="button" title="Create a new account" tabindex="1" ng-click="showHideRegister()" ng-model="regModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">Register</button>
+    <button id="loginButton" type="button" title="Login to Micro-Manager" tabindex="2" ng-click="showHideLogin()" ng-model="logModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">Login</button>
+    <!-- Registration Section -->
+    <section id="registerBox" ng-show="registerVisible">
+        <form class="registerIdForm" name="regForm" novalidate>
+            <input
+                type="text"
+                ng-model="user.firstName"
+                required
+                ng-minlength="1"
+                ng-maxlength="20"
+                ng-pattern="/^[a-zA-Z]+$/"
+                placeholder="First Name" autofocus/>
+            <input
+                type="text"
+                ng-model="user.lastName"
+                required
+                ng-minlength="1"
+                ng-maxlength="30"
+                ng-pattern="/^[a-zA-Z]+$/"
+                placeholder="Last Name" />
+            <input
+                type="text"
+                name="email"
+                ng-model="user.email"
+                required
+                ng-minlength="3"
+                ng-maxlength="50"
+                placeholder="Email" />
+            <input
+                type="password"
+                ng-model="user.password"
+                required
+                ng-minlength="7"
+                ng-maxlength="50"
+                placeholder="Password" />
+            <input
+                type="password"
+                ng-model="user.confirmPassword"
+                required
+                ng-minlength="7"
+                ng-maxlength="50"
+                placeholder="Confirm Password" />
+            <button id="registerSubmitButton" type="submit" title="Create a new account" tabindex="8" ng-click="sendRegistration(regForm)">Register</button>
+        </form>
+    </section>
+    <!-- Login Section -->
+    <section id="loginBox" ng-show="loginVisible">
+        <form class="loginIdForm" name="logForm" novalidate>
+            <input
+                type="text"
+                ng-model="user.emailLogin"
+                required
+                placeholder="Email" autofocus />
+            <input
+                type="password"
+                ng-model="user.passwordLogin"
+                required
+                placeholder="Password" />
+            <section id="checkboxContainer">
+                <label>
+                    <input
+                        id="checkbox"
+                        type="checkbox"
+                        ng-model="checked"
+                        value="Remember Me" />
+                    Remember Me</label>
+            </section>
+            <button id="loginSubmitButton" type="submit" title="Login to Micro-Manager" ng-click="sendLogin(logForm)" tabindex="13">Login</button>
+            <article class="forgetBox">
+                <a tabindex="12" title="Forgot your password?">Forget Password?</a>
+            </article>
+        </form>
+    </section>
+</section>

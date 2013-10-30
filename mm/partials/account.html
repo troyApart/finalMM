@@ -1,0 +1,30 @@
+<div id="siteNav">
+    <button class="btn" ui-sref="app"><i class="icon-backward"></i> Move to App Page</button>
+</div>
+<div>
+	<h2>Account Settings</h2>
+	  <h4 ng-repeat="group in groups" class="btn-med"><hr>{{group.name}}<p></p>
+	  	<input type="text" ng-show= "group.owner==savedLogin.email" ng-model="newGroupName" ngMinlength="3"ngMaxlength="50"
+			placeholder="Enter New Group Name"/>
+		<button ng-show= "group.owner==savedLogin.email" ng-click="editGroupName(newGroupName,group.id)" ng-model= "editButton">Change Name
+		<script type="text/ng-template" id="myModalContent.html">
+	        <div class="modal-header">
+	            <h3>New name: {{newGroupName}}</h3> 
+	        </div>
+	        <div class="modal-body">
+	            <h4>Do you accept?</h4>
+	        </div>
+	        <div class="modal-footer">
+	            <button class="btn btn-primary" ng-click="ok(newGroupName,groupid)">{{groupid}}</button>
+	            <button class="btn btn-warning" ng-click="cancel()">No</button>
+	        </div>
+    </script>
+		</button> <p></p>
+		<button ng-show= "group.owner==savedLogin.email" ng-click="deleteGroup(group.id)" >Delete Group
+
+		</buton>
+		<button ng-show= "group.owner!=savedLogin.email" ng-click="leaveGroup(group.id)"  >Leave Group
+
+		</button>
+	</h4>
+</div>

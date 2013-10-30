@@ -1,0 +1,136 @@
+body {
+	background: #E8E8E8;
+	margin: 10px;
+}
+.done-true{
+    text-decoration: line-through;
+    color: grey;
+}
+#wrap {
+	width: 1200px;
+	margin: 0 auto;
+}
+#heading {
+	float: none;
+	height: 50px;
+}
+#logo {
+	float: left;
+	margin-left: 0;
+	height: 100px;
+}
+#logo img {
+	display: block;
+}
+#company {
+	float: left;
+	margin: 15px 0 0 0;
+	font-size: 2em;
+	line-height: 50px;
+	height: 100px;
+}
+#login {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	margin-right: 50px;
+}
+.nav {
+	float: left;
+	width: 33%;
+	margin: 0 1px 0 1px;
+}
+.shadow {
+	box-shadow: 10px 10px 10px -10px #000;
+    -moz-box-shadow: 10px 10px 10px -10px #000;
+    -webkit-box-shadow: 10px 10px 10px -10px #000;
+}
+#content {
+	float: left;
+	color: #000;
+	width: 1200px;
+	height: 640px;
+	margin: 0 auto;
+	display: block;
+}
+#about {
+	float: left;
+	width: 362px;
+    height: 100%;
+    background: #fff0f7;
+    margin: 1px 50px 1px 2px;
+    border: 1px solid #999;
+    overflow: auto;
+    display: block;
+}
+#about img {
+	margin: 5px;
+	float: right;
+}
+#about h2 {
+	margin: 10px;
+}
+#about p {
+	padding: 10px;
+}
+#purchase {
+	float: left;
+	width: 362px;
+    height: 100%;
+    background: #fff0f7;
+    margin: 1px 50px 1px 2px;
+    border: 1px solid #999;
+    overflow: auto;
+    display: block;
+}
+#purchase h2 {
+	margin: 10px;
+}
+#purchase p {
+	padding: 10px;
+}
+#contact {
+	float: left;
+	width: 362px;
+    height: 100%;
+    background: #fff0f7;
+    margin: 1px 1px 1px 2px;
+    border: 1px solid #999;
+    overflow: auto;
+    display: block;
+}
+#contact h2 {
+	margin: 10px;
+}
+#contact p {
+	padding: 10px;
+}
+.button {
+	color:white;
+    font:2.4em Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+	font-size:90%;
+	padding:14px;
+	background:url(overlay.png) repeat-x center #ffcc00;
+	background-color:rgba(70,130,80,1);
+	border:1px solid blue;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border-bottom:1px solid blue;
+	-moz-box-shadow:inset 0 1px 0 rgba(70,130,80,0.5);
+	-webkit-box-shadow:inset 0 1px 0 rgba(70,130,80,0.5);
+	box-shadow:inset 0 1px 0 rgba(70,130,80,0.5);
+	cursor:pointer;
+ }
+.button:hover {
+	background-color:rgba(70,130,80,0.5);
+ }
+
+#footer {
+	position: relative;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	margin-top: 660px;
+}

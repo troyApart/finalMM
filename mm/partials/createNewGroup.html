@@ -1,0 +1,9 @@
+<div id="siteNav">
+    <button class="btn" ui-sref="app"><i class="icon-backward"></i> Move to App Page</button>
+</div>
+<h3><u>Create Groups</u></h3>
+<input type="text" ng-model="createGroupName" placeholder="Enter a group name"/> <br>
+Group Type: 
+<input type="radio" ng-model="createGroupType" value="peer"/> Peer 
+<input type="radio" ng-model="createGroupType" value="micro"/> Micro <br>
+<input type="submit" ng-click="createGroup()" value="Submit"/>

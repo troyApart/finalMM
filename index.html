@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="microManager" id="ng-app">
+<head>
+    <title>Micro Manager</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="mm/css/normalize.css" />
+
+
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="mm/css/landing.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="mm/css/landing-mobile.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
+    <script src="mm/javascripts/underscore.js"></script>
+    <script src="mm/javascripts/angular-ui-router.js"></script>
+    
+    <script src="http://code.angularjs.org/1.0.0rc10/angular-cookies-1.0.0rc10.js"></script>
+    <script src="mm/javascripts/angular-resource.js"></script>
+
+    <script src="mm/javascripts/angular-webstorage.js"></script>
+
+    <script src="mm/javascripts/ui-bootstrap-tpls-0.6.0.js"></script>
+    <script type="text/javascript" src="mm/javascripts/angular-strap.js"></script>
+    <script type="text/javascript" src="mm/javascripts/app.js"></script>
+
+</head>
+<body ng-controller="IndexController">
+        <div>
+            <div ui-view="loginView"></div>
+        </div>
+    <div id="wrap">
+
+        <section id="heading">
+            <div id="logo">
+                <img src="mm/images/logoNew.png" alt="Logo" />
+            </div>
+            <div id="company">
+                <h1>Micro Manager</h1>
+            </div>
+        </section>
+        
+
+        <br />
+        <section id="four91">
+                <button type="submit" ui-sref="update" class="btn-large">491 Team Updates</button>
+        </section>
+        <div>
+            <div ui-view="contentView"></div>
+        </div>
+
+        <footer id="footer">
+            <hr>
+            <p>All Rights Reserved. Copyright 2013.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<ul class="unstyled">
+    <h4>Pro Members:</h4>
+    <li ng-repeat="member in members | filter:{type:'pro'}">
+        <input type="checkbox" value="{{member.email}}" ng-checked="member.checked" ng-model="member.checked" ng-click="selectedMembers()"><span>{{member.fname + " " + member.lname}}</span>
+    </li>
+    <h4>Free Members:</h4>
+    <li ng-repeat="member in members | filter:{type:'free'}">
+        <input type="checkbox" value="{{member.email}}" ng-checked="member.checked" ng-model="member.checked" ng-click="selectedMembers()"><span>{{member.fname + " " + member.lname}}</span>
+    </li>
+</ul>
+<ul><li ng-repeat="member in members | filter:{checked:true}">{{member.email}}</li></ul>
+<div id="select">
+    <button class="btn-small" ng-click="selectAllMembers()">Select All</button>
+    <button class="btn-small" ng-click="deselectAllMembers()">Select None</button>
+</div>
+<button class="btn-small" ng-click="removeMember()"><i class="icon-trash"></i>Remove Selected Members</button>
+<br /><br />
+<form class="form-horizontal">
+    <input type="text" ng-model="formMemberText" id="textBox" placeholder="Invitee's Email" ng-model-instant>
+    <button class="btn" ng-click="addMember()"><i class="icon-plus"></i>Invite</button>
+</form>

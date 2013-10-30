@@ -1,0 +1,10 @@
+
+<div class="navbar" bs-navbar="">
+    <div class="navbar-inner">
+        <a class="brand" ui-sref="app">Groups</a>
+        <ul class="nav">
+            <li ng-repeat="group in groups"><a ui-sref="app.tasks">{{group.name}}</a></li>
+            <li><a ui-sref="createNewGroup">Create New Group</a></li>
+        </ul>
+    </div>
+</div>

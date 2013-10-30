@@ -1,0 +1,39 @@
+<div id="siteNav">
+    <button class="btn" ui-sref="landing"><i class="icon-backward"></i> Move to Landing Page</button>
+</div>
+<div id="groups">
+  <button ng-click="updateGroups()">Groups</button>
+  <button ng-repeat="group in groups" ng-click="loadGroup(group)" ui-sref="app.tasks" class="btn-small">{{group.name}}</button>
+  <button ui-sref="createNewGroup">Create New Group</button>
+</div>
+<div id="invites">
+  <button ng-click="updateInvites()">Invites</button>
+  <button ng-repeat="invite in invites" ng-click="acceptInvite(invite)" class="btn-small">{{invite.inviter}}
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3>Group Invite</h3> 
+            <h4>by {{mod.inviter}}</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Do you accept?</h4>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">Yes</button>
+            <button class="btn btn-warning" ng-click="cancel()">No</button>
+        </div>
+    </script>
+  </button>
+</div>
+<section id="content">
+    <div id="about" class="shadow">
+        <h2>Tasks</h2>
+        <div ui-view="taskView"></div>
+    </div>
+    <div id="purchase" class="shadow">
+        <h2>Members</h2>
+      <div ui-view="memberView"></div>
+    </div>
+    <div id="contact" class="shadow">
+        <h2>Board</h2>
+    </div>
+</section>
